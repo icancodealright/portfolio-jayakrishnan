@@ -42,3 +42,6 @@ body {
     display: inline-block;
   }
   
+  .currentPage {
+    transform: scale(1.3);
+  }
