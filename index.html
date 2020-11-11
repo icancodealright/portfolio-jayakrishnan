@@ -10,6 +10,39 @@
         <script src="js/style.js" defer></script>
     </head>
     <body>
-       Let's Begin
+     
+    <div id="main">
+        <div id="main__content">
+          <!-- Inside home Page    -->
+          <div id="main__home">
+            <nav>
+              <div onclick="goto('__home')">HOME</div>
+              <div onclick="goto('__projects')">PROJECTS</div>
+              <div onclick="goto('__about')">ABOUT</div>
+              <div onclick="goto('__contact')">CONTACT</div>
+            </nav>
+          </div>
+          <!-- Home page ends here -->
+  
+          <!-- Project Page starts here -->
+          <div id="main__projects">Inside Project</div>
+          <!-- Project page ends here  -->
+  
+          <!-- About Page starts here -->
+          <div id="main__about">Inside about</div>
+          <!-- About Page ends here -->
+  
+          <!-- Contact Page starts here -->
+          <div id="main__contact">Inside Contact</div>
+        </div>
+  
+        <div id="buttons">
+          <span id="__home" onclick="goto(this.id)" class="dot"></span>
+          <span class="dot" id="__projects" onclick="goto(this.id)"></span>
+          <span id="__about" onclick="goto(this.id)" class="dot"></span>
+          <span id="__contact" onclick="goto(this.id)" class="dot"></span>
+        </div>
+      </div>
     </body>
-</html>
+  </html>
+  
