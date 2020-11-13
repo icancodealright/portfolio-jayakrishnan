@@ -1,7 +1,21 @@
-function goto(id) {
-  showCurrentPageButton(id);
-  const page = document.getElementById(`main${id}`);
-  page.scrollIntoView({ behavior: "smooth" });
+function goto(id, isPage) {
+  if (isPage == "true") {
+    showCurrentPageButton(id);
+    const page = document.getElementById(`main${id}`);
+    page.scrollIntoView({ behavior: "smooth" });
+  } else {
+    const divs = document.getElementById("projects__content").children;
+    console.log(divs);
+    Array.from(divs).forEach((div) => {
+      if (div.getAttribute("id") == `project__of${id}`) {
+        div.classList.remove("hide");
+        div.classList.add(`content__of${id}`);
+      } else {
+        div.className = "";
+        div.classList.add("hide");
+      }
+    });
+  }
 }
 
 function showCurrentPageButton(id) {
@@ -42,5 +56,35 @@ window.addEventListener("wheel", (event) => {
       return;
     }
   }
-  goto(ids[current]);
+  goto(ids[current], "true");
 });
+
+//for next button
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}

@@ -1,48 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Jayakrishnan's Portfolio</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/style.js" defer></script>
-    </head>
-    <body>
-     
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Jayakrishnan's Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/style.js" defer></script>
+    <script src="js/contentProject.js"></script>
+  </head>
+  <body>
     <div id="main">
-        <div id="main__content">
-          <!-- Inside home Page    -->
-          <div id="main__home">
+      <div id="main__content">
+        <!-- Inside home Page    -->
+        <div id="main__home">
+          <nav>
+            <div onclick="goto('__home','true')">HOME</div>
+            <div onclick="goto('__projects','true')">PROJECTS</div>
+            <div onclick="goto('__about','true')">ABOUT</div>
+            <div onclick="goto('__contact','true')">CONTACT</div>
+          </nav>
+        </div>
+        <!-- Home page ends here -->
+
+        <!-- Project Page starts here -->
+        <div id="main__projects">
+          <div id="projects__navigation">
             <nav>
-              <div onclick="goto('__home')">HOME</div>
-              <div onclick="goto('__projects')">PROJECTS</div>
-              <div onclick="goto('__about')">ABOUT</div>
-              <div onclick="goto('__contact')">CONTACT</div>
+              <div onclick="goto('__javascript','false')">JAVASCRIPT</div>
+              <div onclick="goto('__java','false')">JAVA</div>
+              <div onclick="goto('__html','false')">HTML</div>
+              <div onclick="goto('__react','false')">REACT</div>
             </nav>
           </div>
-          <!-- Home page ends here -->
-  
-          <!-- Project Page starts here -->
-          <div id="main__projects">Inside Project</div>
-          <!-- Project page ends here  -->
-  
-          <!-- About Page starts here -->
-          <div id="main__about">Inside about</div>
-          <!-- About Page ends here -->
-  
-          <!-- Contact Page starts here -->
-          <div id="main__contact">Inside Contact</div>
+          <div id="projects__content">
+            <div id="project__of__javascript" class="content__of__javascript">
+              <div onclick="plusSlides(-1)">&#10094;</div>
+              <div>
+                <content-project
+                  class="mySlides fade"
+                  name="Covid-19 Tracker"
+                  url="images/covid-tracker-app.png"
+                  src="https://icancodealright.github.io/covid-tracker-app/"
+                >
+                </content-project>
+                <content-project
+                  class="mySlides fade"
+                  name="Github-Web-app"
+                  url="images/github-web-app.png"
+                  src="https://icancodealright.github.io/github-user-webapp"
+                >
+                </content-project>
+                <content-project
+                  class="mySlides fade"
+                  name="Quiz-app"
+                  url="images/quiz-app.png"
+                  src="https://icancodealright.github.io/quiz-app/"
+                >
+                </content-project>
+              </div>
+              <div onclick="plusSlides(1)">&#10095;</div>
+            </div>
+            <div id="project__of__java" class="hide">Inside JAVA</div>
+            <div id="project__of__html" class="hide">Inside html</div>
+            <div id="project__of__react" class="hide">Inside react</div>
+          </div>
         </div>
-  
-        <div id="buttons">
-          <span id="__home" onclick="goto(this.id)" class="dot currentPage"></span>
-          <span class="dot" id="__projects" onclick="goto(this.id)"></span>
-          <span id="__about" onclick="goto(this.id)" class="dot"></span>
-          <span id="__contact" onclick="goto(this.id)" class="dot"></span>
-        </div>
+        <!-- Project page ends here  -->
+
+        <!-- About Page starts here -->
+        <div id="main__about">Inside about</div>
+        <!-- About Page ends here -->
+
+        <!-- Contact Page starts here -->
+        <div id="main__contact">Inside Contact</div>
       </div>
-    </body>
-  </html>
-  
+
+      <div id="buttons">
+        <span
+          id="__home"
+          onclick="goto(this.id,'true')"
+          class="dot currentPage"
+        ></span>
+        <span class="dot" id="__projects" onclick="goto(this.id,'true')"></span>
+        <span id="__about" onclick="goto(this.id,'true')" class="dot"></span>
+        <span id="__contact" onclick="goto(this.id,'true')" class="dot"></span>
+      </div>
+    </div>
+  </body>
+</html>
