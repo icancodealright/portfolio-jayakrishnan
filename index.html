@@ -6,7 +6,12 @@
     <title>Jayakrishnan's Portfolio</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/githubProfile.css" />
+    <link rel="stylesheet" href="css/contact.css"/>
+  
+
     <script src="js/style.js" defer></script>
     <script src="js/contentProject.js"></script>
   </head>
@@ -21,6 +26,12 @@
             <div onclick="goto('__about','true')">ABOUT</div>
             <div onclick="goto('__contact','true')">CONTACT</div>
           </nav>
+
+          <div class="main__home__content">
+            <div class="salutation">Hi,</div>
+            <div class="intro">I'm Jayakrishnan</div>
+            <div class="skills">Back-End/Front-End/Web-Developer</div>
+          </div>
         </div>
         <!-- Home page ends here -->
 
@@ -70,13 +81,76 @@
         <!-- Project page ends here  -->
 
         <!-- About Page starts here -->
-        <div id="main__about">Inside about</div>
+        <div id="main__about">
+          <div class="github__details">
+            <div class="user" id="github__profile"></div>
+            <script src="js/githubProfile.js"></script>
+          </div>
+          <div class="main__about__introduction">
+            ABOUT ME
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At libero,
+            sed reiciendis ipsam alias ratione. Provident tempore aspernatur
+            minus reprehenderit facilis. Ipsa amet repudiandae nam, quasi sunt
+            corrupti commodi. Commodi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At libero,
+            sed reiciendis ipsam alias ratione. Provident tempore aspernatur
+            minus reprehenderit facilis. Ipsa amet repudiandae nam, quasi sunt
+            corrupti commodi. Commodi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At libero,
+            sed reiciendis ipsam alias ratione. Provident tempore aspernatur
+            minus reprehenderit facilis. Ipsa amet repudiandae nam, quasi sunt
+            corrupti commodi. Commodi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At libero,
+            sed reiciendis ipsam alias ratione. Provident tempore aspernatur
+            minus reprehenderit facilis. Ipsa amet repudiandae nam, quasi sunt
+            corrupti commodi. Commodi.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At libero,
+            sed reiciendis ipsam alias ratione. Provident tempore aspernatur
+            minus reprehenderit facilis. Ipsa amet repudiandae nam, quasi sunt
+            corrupti commodi. Commodi.
+          </div>
+        </div>
         <!-- About Page ends here -->
 
         <!-- Contact Page starts here -->
-        <div id="main__contact">Inside Contact</div>
-      </div>
+        <div id="main__contact">
+          <div id="main__contact__detail">
 
+            <div class="contact__gmail">
+               <div class="icons__gmail">
+                <img src="images/icons/gmail-icon.png" alt="gmail icon" >
+              </div>
+              <a href = "mailto:icancodealright@yahoo.com">
+             <button type="submit"> Email  Me</button>
+            </a>
+            </div> 
+            
+            <div class="contact__insta">
+               <div class="icons__instagram">
+                <img src="images/icons/instagram-icon.png" alt="instagram icon" >
+              </div>
+              <a href="https://www.instagram.com/krishna999.info/?hl=en">
+                <button type="submit">Find me</button></a>
+            </div> 
+            
+            <div class="contact__linkedin">
+               <div class="icons__linkedin">
+                 <img src="images/icons/linkedin-icon.png" alt="linkedin icon" >
+              </div>
+             <button type="submit">Find me</button>
+            </div> 
+
+            <div class="contact__Github">
+               <div class="icons__github">
+                <img src="images/icons/github-icon.png" alt="github icon" >
+              </div>
+              <a href="https://github.com/icancodealright">
+             <button type="submit">Find me</button></a>
+            </div> 
+            
+                 
+      </div>
+     <!-- Contact page ends here -->
       <div id="buttons">
         <span
           id="__home"

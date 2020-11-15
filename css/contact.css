@@ -1,0 +1,31 @@
+#main__contact__detail {
+  padding-top: 9rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+div[class^="contact__"] {
+  margin-top: 5rem;
+  background-color: gray;
+  width: 10em;
+  height: 10em;
+  position: relative;
+}
+
+#main__contact img {
+  width: 70px;
+  height: 70px;
+}
+
+div[class^="icons__"] {
+  position: absolute;
+  top: -2.7em;
+  left: 3em;
+}
+
+button {
+  position: absolute;
+  top: 5em;
+  left: 3.5em;
+  width: 5em;
+  height: 2.5em;
+}
